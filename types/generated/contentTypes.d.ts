@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
+    description: '';
     displayName: 'product';
     pluralName: 'products';
     singularName: 'product';
@@ -392,9 +393,11 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
       'api::product.product'
     > &
       Schema.Attribute.Private;
+    medium: Schema.Attribute.String;
     name: Schema.Attribute.String;
     price: Schema.Attribute.Decimal;
     publishedAt: Schema.Attribute.DateTime;
+    size: Schema.Attribute.String;
     slug: Schema.Attribute.UID<'name'>;
     Stockquantity: Schema.Attribute.Integer;
     updatedAt: Schema.Attribute.DateTime;
