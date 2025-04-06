@@ -4,7 +4,8 @@
   "info": {
     "singularName": "easycart-product",
     "pluralName": "easycart-products",
-    "displayName": "easycart-product"
+    "displayName": "easycart-product",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
