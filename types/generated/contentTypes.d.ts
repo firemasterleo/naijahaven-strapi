@@ -369,6 +369,54 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiEasycartProductEasycartProduct
+  extends Struct.CollectionTypeSchema {
+  collectionName: 'easycart_products';
+  info: {
+    displayName: 'easycart-product';
+    pluralName: 'easycart-products';
+    singularName: 'easycart-product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    bestsellerTag: Schema.Attribute.JSON;
+    category: Schema.Attribute.String;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    description: Schema.Attribute.Blocks;
+    estimatedWeight: Schema.Attribute.Decimal;
+    finalPriceCalculated: Schema.Attribute.Boolean;
+    flavor: Schema.Attribute.String;
+    imageUrl: Schema.Attribute.Media<'images', true>;
+    isWeightBased: Schema.Attribute.Boolean;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::easycart-product.easycart-product'
+    > &
+      Schema.Attribute.Private;
+    minWeightIncrement: Schema.Attribute.Decimal;
+    name: Schema.Attribute.String;
+    pricePerUnit: Schema.Attribute.Decimal;
+    pricePerWeight: Schema.Attribute.Decimal;
+    promoPricePerUnit: Schema.Attribute.Decimal;
+    promoPricePerWeight: Schema.Attribute.Decimal;
+    publishedAt: Schema.Attribute.DateTime;
+    size: Schema.Attribute.String;
+    sku: Schema.Attribute.String;
+    slug: Schema.Attribute.UID<'name'>;
+    stockQuantity: Schema.Attribute.Integer;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    variantOf: Schema.Attribute.String;
+    wellnessTag: Schema.Attribute.JSON;
+  };
+}
+
 export interface ApiProductProduct extends Struct.CollectionTypeSchema {
   collectionName: 'products';
   info: {
@@ -916,6 +964,7 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::easycart-product.easycart-product': ApiEasycartProductEasycartProduct;
       'api::product.product': ApiProductProduct;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;

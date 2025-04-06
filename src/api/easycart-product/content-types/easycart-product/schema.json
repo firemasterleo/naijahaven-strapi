@@ -1,0 +1,79 @@
+{
+  "kind": "collectionType",
+  "collectionName": "easycart_products",
+  "info": {
+    "singularName": "easycart-product",
+    "pluralName": "easycart-products",
+    "displayName": "easycart-product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "name"
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "category": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "isWeightBased": {
+      "type": "boolean"
+    },
+    "finalPriceCalculated": {
+      "type": "boolean"
+    },
+    "estimatedWeight": {
+      "type": "decimal"
+    },
+    "minWeightIncrement": {
+      "type": "decimal"
+    },
+    "pricePerUnit": {
+      "type": "decimal"
+    },
+    "pricePerWeight": {
+      "type": "decimal"
+    },
+    "promoPricePerUnit": {
+      "type": "decimal"
+    },
+    "promoPricePerWeight": {
+      "type": "decimal"
+    },
+    "stockQuantity": {
+      "type": "integer"
+    },
+    "size": {
+      "type": "string"
+    },
+    "flavor": {
+      "type": "string"
+    },
+    "variantOf": {
+      "type": "string"
+    },
+    "imageUrl": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "wellnessTag": {
+      "type": "json"
+    },
+    "bestsellerTag": {
+      "type": "json"
+    }
+  }
+}
