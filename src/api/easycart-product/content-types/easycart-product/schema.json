@@ -19,7 +19,7 @@
       "targetField": "name"
     },
     "description": {
-      "type": "string[]"
+      "type": "string"
     },
     "category": {
       "type": "string"
