@@ -19,7 +19,7 @@
       "targetField": "name"
     },
     "description": {
-      "type": "text"
+      "type": "blocks"
     },
     "category": {
       "type": "string"
