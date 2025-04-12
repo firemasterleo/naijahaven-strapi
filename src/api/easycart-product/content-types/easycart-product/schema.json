@@ -79,6 +79,9 @@
     },
     "bestsellerTag": {
       "type": "json"
+    },
+    "lastEditedAt": {
+      "type": "datetime"
     }
   }
 }
