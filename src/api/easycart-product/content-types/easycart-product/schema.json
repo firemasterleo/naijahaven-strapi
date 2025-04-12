@@ -79,10 +79,6 @@
     },
     "bestsellerTag": {
       "type": "json"
-    },
-    "lastEditedAt": {
-      "type": "timestamptz",
-      "default": "now()"
-}
+    }
   }
 }
