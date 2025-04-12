@@ -79,6 +79,11 @@
     },
     "bestsellerTag": {
       "type": "json"
-    }
+    },
+    "last_edited_at": {
+      "type": "timestamptz",
+      "default": "now()",
+      "description": "Tracks the last time the product was updated from the sheet."
+}
   }
 }
