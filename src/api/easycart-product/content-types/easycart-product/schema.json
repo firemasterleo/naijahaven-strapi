@@ -52,6 +52,7 @@
     "promoPricePerUnit": {
       "type": "decimal"
     },
+    
     "promoPricePerWeight": {
       "type": "decimal"
     },
